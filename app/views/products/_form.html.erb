@@ -1,0 +1,39 @@
+<%= form_for(@products) do |f| %>
+    <%= render "share/errors" %>
+ <fieldset>
+ <p>
+    <%= f.label :ID %><br/>
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :Name %><br/>
+    <%= f.text_field:name %>
+  </p>
+  <p>
+    <%= f.label :Description %><br/>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :Price %><br/>
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :Rating%><br/>
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :Imported  %><br/>
+    <%= f.date_select  :imported_on %>
+  </p>
+  <p>
+    <%= f.label :image_name %><br/>
+    <%= f.text_field :image_name %>
+  </p>
+    <button class="button button1">
+      <%= f.submit %>
+   </button>
+   
+    <button class="button button1"> <%= link_to "Back", products_path %> </button>
+     <p>
+  </fieldset>
+<%end%>

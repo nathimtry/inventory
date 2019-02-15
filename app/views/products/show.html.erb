@@ -1,0 +1,29 @@
+ <button class="button button1"><%= link_to "view details", products_path %> </button>
+ <button class="button button1"><%= link_to "Edit 	", edit_product_path %> </button>
+ <button class="button button1"><%= link_to "Delete" , product_path(@products), method: :delete ,data: ('Are you Sour ?') %></button>
+
+<article>
+  <header>
+    <h1><%= @products.id %></h1>
+  </header>
+  <h2>Name</h2>
+  <p>
+    <%= @products.name %>
+  </p>
+  <h2>Description</h2>
+  <p>
+    <%= @products.description %>
+  </p>
+  <h3>Rating</h3>
+  <p>
+    <%= @products.rating %>
+  </p>
+  <h3>Imported_on</h3>
+  <p>
+    <%= @products.imported_on %>
+  </p>
+  <h3>Image</h3>
+  <p>
+   <%= @products.image_name %>
+  </p>
+</article>

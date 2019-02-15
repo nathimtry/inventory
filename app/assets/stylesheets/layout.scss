@@ -1,0 +1,44 @@
+$primary-color: #d9e0d9;
+$secondary-color: black;
+
+header#page-header {
+  color: $secondary-color;
+  background: $primary-color;
+  padding: 5px;
+  border-bottom: 3px solid darken($primary-color, 10%);
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+footer#page-footer {
+  color: $primary-color;
+  background: $secondary-color;
+  text-align: center;
+  padding: 5px;
+}
+#img_por img{
+
+  width:100px;
+  height:100px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}

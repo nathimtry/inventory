@@ -1,0 +1,34 @@
+
+<button class="button button1"><%= link_to "Add New Product" , new_product_path %></button>
+
+<ul>
+<% @products.each do |product| %>
+
+	<li>
+	
+		<h2 id="img_por"><%= image_for(product) %></h2>
+
+       <h2> <%= link_to(product.name, product_path(product)) %>
+	
+	<ol>
+		ID :<%= product.id %>
+	</ol>
+	<!-- <li>
+		<%= product.name %>
+	</li> -->
+	<ol>
+		Description :<%= truncate(product.description , length: 20 ) %>
+	</ol>
+	<ol>
+		Rating :<%= product.rating %>
+	</ol>
+	<ol>
+		Price :<%= number_to_currency (product.price )%>
+	</ol>
+	<ol>
+		Imported :<%= product.imported_on%>
+	</ol>
+	<br>
+</li>
+<% end %>
+</ul>

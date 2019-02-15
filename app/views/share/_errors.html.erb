@@ -1,0 +1,18 @@
+<% if @products.errors.any? %>
+  
+<section id="errors">
+  <header>
+    <h2 style="color: red">
+      Oops! The <%= @proerror.class.name.titleize.downcase %> could not be saved. 
+    </h2>
+    <h3 style="color: red">
+      Please correct the following <%= pluralize(@proerror.count, "error") %>:
+    </h3>
+  </header>
+  <ul>
+    <% @products.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</section>
+<% end %>
